@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen h-screen gap-0 ">
         <img src={"/me.JPG"} className="mask mask-parallelogram-4" />
+        {/* content */}
         <div className="gap-1">
           <h1 className="text-2xl">Rikza Fauzan Nurfadilah</h1>
           <h1 className="text-4xl font-bold">
@@ -22,7 +23,8 @@ export default function Home() {
               }}
             />
           </h1>
-          <div className=" shadow mt-6 grid grid-cols-1 lg:grid-cols-2">
+          {/* stat */}
+          <div className="shadow mt-6 grid grid-cols-1 lg:grid-cols-2">
             <div className="stat">
               <div className="stat-figure text-secondary">
                 <svg
@@ -60,9 +62,9 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">Periode</div>
-              <div className="stat-value">2023</div>
-              <div className="stat-desc">1 Januari - 30 Desember</div>
+              <div className="stat-title">Posisi</div>
+              <div className="stat-value">Front-End</div>
+              <div className="stat-desc">Tim IT</div>
             </div>
           </div>
         </div>
