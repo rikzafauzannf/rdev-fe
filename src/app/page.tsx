@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       {/* ricent project */}
-      <div className="mx-7 my-16 lg:mx-20">
+      <div className="mx-7 lg:mx-20">
         <h1 className="text-2xl mb-4 text-primary">Ricent Project</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {data.map((item, index) => (
