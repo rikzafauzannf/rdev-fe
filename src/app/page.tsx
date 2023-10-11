@@ -23,7 +23,7 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen h-screen mb-5 gap-1">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen mb-5 gap-1">
         <img
           src={"/me.JPG"}
           className="mask mask-parallelogram-4 h-full w-full object-cover object-center"
@@ -47,6 +47,20 @@ export default function Home() {
           </h1>
           {/* stat */}
           <StatData />
+
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {data.map((item, index) => (
+              <CardProject
+                key={index}
+                imgUrl="/me.JPG"
+                altImg="Me"
+                detail={item.data}
+                title={item.title}
+                position="active"
+                index=""
+              />
+            ))}
+          </div> */}
         </div>
       </div>
       {/* ricent project */}
