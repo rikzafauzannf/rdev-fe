@@ -22,7 +22,7 @@ export default function Home() {
               }}
             />
           </h1>
-          <div className="stats shadow mt-6">
+          <div className=" shadow mt-6 grid grid-cols-1 lg:grid-cols-2">
             <div className="stat">
               <div className="stat-figure text-secondary">
                 <svg
