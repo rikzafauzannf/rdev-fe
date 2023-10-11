@@ -1,15 +1,37 @@
 "use client";
 import Typewriter from "typewriter-effect";
-
+import StatData from "./inc/statData";
+import CardProject from "./inc/cardproject";
 export default function Home() {
+  const data = [
+    {
+      title: "Kelom",
+      data: "Diskominfo Kota Tasikmalaya",
+    },
+    {
+      title: "Baguer",
+      data: "Diskominfo Kota Tasikmalaya",
+    },
+    {
+      title: "Goso",
+      data: "Diskominfo Kota Tasikmalaya",
+    },
+    {
+      title: "Katasik",
+      data: "Diskominfo Kota Tasikmalaya",
+    },
+  ];
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen h-screen gap-0 ">
-        <img src={"/me.JPG"} className="mask mask-parallelogram-4" />
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen h-screen mb-5 gap-1">
+        <img
+          src={"/me.JPG"}
+          className="mask mask-parallelogram-4 h-full w-full object-cover object-center"
+        />
         {/* content */}
         <div className="gap-1">
-          <h1 className="text-2xl">Rikza Fauzan Nurfadilah</h1>
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-2xl text-primary">Rikza Fauzan Nurfadilah</h1>
+          <h1 className="text-4xl font-bold text-secondary">
             <Typewriter
               options={{
                 strings: [
@@ -24,49 +46,24 @@ export default function Home() {
             />
           </h1>
           {/* stat */}
-          <div className="shadow mt-6 grid grid-cols-1 lg:grid-cols-2">
-            <div className="stat">
-              <div className="stat-figure text-secondary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="inline-block w-8 h-8 stroke-current"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-              </div>
-              <div className="stat-title">Work</div>
-              <div className="stat-value">Diskominfo</div>
-              <div className="stat-desc">Kota Tasikmalaya</div>
-            </div>
-
-            <div className="stat">
-              <div className="stat-figure text-secondary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="inline-block w-8 h-8 stroke-current"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                  ></path>
-                </svg>
-              </div>
-              <div className="stat-title">Posisi</div>
-              <div className="stat-value">Front-End</div>
-              <div className="stat-desc">Tim IT</div>
-            </div>
-          </div>
+          <StatData />
+        </div>
+      </div>
+      {/* ricent project */}
+      <div className="mx-7 my-16 lg:mx-20">
+        <h1 className="text-2xl mb-4 text-primary">Ricent Project</h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {data.map((item, index) => (
+            <CardProject
+              key={index}
+              imgUrl="/me.JPG"
+              altImg="Me"
+              detail={item.data}
+              title={item.title}
+              position="active"
+              index=""
+            />
+          ))}
         </div>
       </div>
     </>
