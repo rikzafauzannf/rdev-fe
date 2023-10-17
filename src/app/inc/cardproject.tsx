@@ -25,7 +25,7 @@ const CardProject = (props: Props) => {
           <img
             src={imgUrl}
             alt={altImg}
-            className="w-full h-80 object-cover object-center"
+            className="w-full h-50 object-cover object-center"
           />
         </figure>
         <div className="card-body">
