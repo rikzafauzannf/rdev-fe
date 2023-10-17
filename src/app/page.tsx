@@ -27,15 +27,15 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen mb-5 gap-1 p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center align-middle items-center w-screen mb-5 gap-1">
         <img
           src={"/me.JPG"}
           className="mask mask-parallelogram-4 h-full w-full object-cover object-center"
         />
         {/* content */}
-        <div className="gap-1">
+        <div className="gap-1 p-6">
           <h1 className="text-2xl text-primary">Rikza Fauzan Nurfadilah</h1>
-          <h1 className="text-6xl font-bold text-secondary my-6">
+          <h1 className="text-4xl font-extrabold text-secondary mt-2">
             <Typewriter
               options={{
                 strings: [
@@ -50,7 +50,7 @@ export default function Home() {
             />
           </h1>
           <p className="text-accent">
-            Saya tertarik di bidang programming khususnya Front-End Developer
+            Membuat keindahnan dengan sejuta codingan.
           </p>
           {/* stat */}
           <StatData />
