@@ -6,19 +6,23 @@ export default function Home() {
   const data = [
     {
       title: "Kelom",
-      data: "Diskominfo Kota Tasikmalaya",
+      data: "Aplikasi Kelurahan On Mobile untuk membantu kinerja pemerintahan kota Tasikmalaya",
+      imgUrl: "/KelomPro.jpg",
     },
     {
       title: "Baguer",
-      data: "Diskominfo Kota Tasikmalaya",
+      data: "Aplikasi ini digunakan untuk media penyelenggaraan bantuan terhadap warga yang membutuhkan dengan fitur Bantosan Wargi",
+      imgUrl: "/BageurPro.jpg",
     },
     {
       title: "Goso",
       data: "Diskominfo Kota Tasikmalaya",
+      imgUrl: "/me.JPG",
     },
     {
       title: "Katasik",
       data: "Diskominfo Kota Tasikmalaya",
+      imgUrl: "/me.JPG",
     },
   ];
   return (
@@ -31,7 +35,7 @@ export default function Home() {
         {/* content */}
         <div className="gap-1">
           <h1 className="text-2xl text-primary">Rikza Fauzan Nurfadilah</h1>
-          <h1 className="text-4xl font-bold text-secondary">
+          <h1 className="text-6xl font-bold text-secondary my-6">
             <Typewriter
               options={{
                 strings: [
@@ -45,9 +49,14 @@ export default function Home() {
               }}
             />
           </h1>
+          <p className="text-accent">
+            Saya tertarik di bidang programming khususnya Front-End Developer
+          </p>
           {/* stat */}
           <StatData />
-
+          <button className="btn btn-accent my-6 grid w-1/2 items-center justify-center align-middle">
+            Download CV
+          </button>
           {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {data.map((item, index) => (
               <CardProject
@@ -66,11 +75,11 @@ export default function Home() {
       {/* ricent project */}
       <div className="grid mx-7 mt-auto lg:mx-20 ">
         <h1 className="text-2xl mb-4 text-primary">Ricent Project</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
           {data.map((item, index) => (
             <CardProject
               key={index}
-              imgUrl="/me.JPG"
+              imgUrl={item.imgUrl}
               altImg="Me"
               detail={item.data}
               title={item.title}

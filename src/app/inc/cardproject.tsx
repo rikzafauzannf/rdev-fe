@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   index: string;
@@ -10,18 +12,20 @@ interface Props {
 }
 
 const CardProject = (props: Props) => {
+  const router = useRouter();
   const { index, imgUrl, altImg, title, detail, position } = props;
   return (
     <>
       <div
         // key={index}
-        className="card w-full bg-base-100 shadow-xl border-2 border-accent"
+        className="cursor-pointer card w-full bg-base-100 shadow-xl border-2 border-secondary"
+        onClick={() => router.push("kelom.tasikmalayakota.go.id")}
       >
         <figure>
           <img
             src={imgUrl}
             alt={altImg}
-            className="w-full h-60 object-cover object-center"
+            className="w-full h-80 object-cover object-center"
           />
         </figure>
         <div className="card-body">
